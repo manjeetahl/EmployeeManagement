@@ -60,7 +60,7 @@ namespace EmployeeManagement.ViewModel
                 NotifyPropertyChanged("EmployeeList");
             }
         }
-        public EmployeeService EmpService { get; set; }
+        public IEmployeeService EmpService { get; set; }
      
 
         private EmployeeResponse _oEmpResponse;

@@ -7,7 +7,7 @@ using EmployeeManagement.Model;
 
 namespace EmployeeManagement.EmployeService
 {
-    interface IEmployeeService
+    public interface IEmployeeService
     {
         Task<EmployeeResponse> GetEmployeeList();
         Task<EmployeeResponse> SearchEmployeeByName(string name);
