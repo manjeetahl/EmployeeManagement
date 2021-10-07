@@ -1,0 +1,44 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:EmployeeManagement.Resources">
+    <ControlTemplate x:Key="ButtonTemplate" TargetType="{x:Type Button}">
+        <Border CornerRadius="5" Height="Auto"  Background="SkyBlue"  BorderThickness="2" >
+            <ContentPresenter Margin="2,2,2,2" Height="auto" Width="auto" HorizontalAlignment="Center" ContentSource="Content">
+
+            </ContentPresenter>
+        </Border>
+
+
+    </ControlTemplate>
+    <ControlTemplate x:Key="GroupBoxTemplate" TargetType="{x:Type GroupBox}">
+        <Border CornerRadius="2" BorderBrush="SkyBlue"  BorderThickness="1" >
+            <StackPanel>
+
+                <ContentPresenter Width="Auto"
+                    ContentSource="Header">
+                    <ContentPresenter.Resources>
+                        <Style
+                        TargetType="{x:Type TextBlock}">
+                            <Setter
+                          Property="Background"
+                          Value="SkyBlue" />
+
+                        </Style>
+                    </ContentPresenter.Resources>
+                </ContentPresenter>
+
+                <ContentPresenter
+                  ContentSource="Content" />
+            </StackPanel>
+
+        </Border>
+    </ControlTemplate>
+
+    <!--This style used for normal button style-->
+    <Style x:Key="ButtonStyle" TargetType="{x:Type Button}">
+        <Setter Property="Background" Value="SkyBlue" />
+
+        <Setter Property="FontSize" Value="14" />
+    </Style>
+
+</ResourceDictionary>
